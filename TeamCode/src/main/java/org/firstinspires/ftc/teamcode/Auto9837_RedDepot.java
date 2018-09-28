@@ -43,6 +43,7 @@ public class Auto9837_RedDepot extends LinearOpMode {
     public float robotX = 0;
     public float robotY = 0;
     public float robotAngle = 0;
+
     @Override
     public void runOpMode() {
 
@@ -57,6 +58,7 @@ public class Auto9837_RedDepot extends LinearOpMode {
                 lastKnownLocation = latestLocation;
             }
 
+            //Get robot coordinates
             float[] robotCoordinates = lastKnownLocation.getTranslation().getData();
 
             robotX = robotCoordinates[0];
