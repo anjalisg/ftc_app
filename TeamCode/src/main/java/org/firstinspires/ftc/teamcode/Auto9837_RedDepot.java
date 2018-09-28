@@ -6,12 +6,14 @@ import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.vuforia.HINT;
 import com.vuforia.Vuforia;
 
+import org.firstinspires.ftc.robotcontroller.external.samples.ConceptVuforiaNavigation;
 import org.firstinspires.ftc.robotcore.external.ClassFactory;
 import org.firstinspires.ftc.robotcore.external.matrices.OpenGLMatrix;
 import org.firstinspires.ftc.robotcore.external.navigation.AngleUnit;
 import org.firstinspires.ftc.robotcore.external.navigation.AxesOrder;
 import org.firstinspires.ftc.robotcore.external.navigation.AxesReference;
 import org.firstinspires.ftc.robotcore.external.navigation.Orientation;
+import org.firstinspires.ftc.robotcore.external.navigation.RelicRecoveryVuMark;
 import org.firstinspires.ftc.robotcore.external.navigation.VuforiaLocalizer;
 import org.firstinspires.ftc.robotcore.external.navigation.VuforiaTrackable;
 import org.firstinspires.ftc.robotcore.external.navigation.VuforiaTrackableDefaultListener;
@@ -22,8 +24,10 @@ import org.firstinspires.ftc.robotcore.external.navigation.VuforiaTrackables;
 /**
  * Created by Anjali on 9/24/2018.
  */
+@com.qualcomm.robotcore.eventloop.opmode.Autonomous(name="Auto_RedDepot", group="Pushbot")
 
-@Autonomous(name="Vuforia", group ="Concept")
+
+//@Autonomous(name="Vuforia", group ="Concept")
 public class Auto9837_RedDepot extends LinearOpMode {
 
     VuforiaLocalizer vuforiaLocalizer;
@@ -54,6 +58,8 @@ public class Auto9837_RedDepot extends LinearOpMode {
 
             OpenGLMatrix latestLocation = listener.getUpdatedRobotLocation();   //this method tracks where the robot while Vuforia is tracking the target (otherwise, it returns null)
 
+            //RoverRuckus
+
             if(latestLocation != null){
                 lastKnownLocation = latestLocation;
             }
@@ -71,6 +77,12 @@ public class Auto9837_RedDepot extends LinearOpMode {
 
             telemetry.update();
             idle();
+//
+//            RelicRecoveryVuMark vuMark = RelicRecoveryVuMark.from(relicTemplate);
+//            if ( vuMark != RelicRecoveryVuMark.UNKNOWN) {
+//
+//            }
+
 
         }
     }
@@ -98,8 +110,8 @@ public class Auto9837_RedDepot extends LinearOpMode {
         Vuforia.setHint(HINT.HINT_MAX_SIMULTANEOUS_IMAGE_TARGETS, 4);
 
         //CHANGE FOR DIFFERENT IMAGE TARGETS
-        target = visionTargets.get(0);
-        target.setName("Front Perimeter Target Image");
+        target = visionTargets.get(3);
+        target.setName("Blue Perimeter Target Image");
         //CHANGE TARGET LOCATION FOR DIFFERENT TARGETS
         //x,y,z = location (mm); u,v,w refers to rotation (degrees)
         target.setLocation(createMatrix(0,0,0,0,0,0));      //set target at zero for now, fix after testing
