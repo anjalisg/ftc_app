@@ -78,8 +78,13 @@ public class Auto9837_RedDepot extends LinearOpMode {
             telemetry.update();
             idle();
 //
-//            RelicRecoveryVuMark vuMark = RelicRecoveryVuMark.from(relicTemplate);
-//            if ( vuMark != RelicRecoveryVuMark.UNKNOWN) {
+//            RelicRecoveryVuMark vuMark = RelicRecoveryVuMark.from(roverRuckusTemplate);
+//            if ( vuMark != RelicRecoveryVuMark.UNKNOWN) { //if image is known
+//                //define constants:
+//                double targetX;   //set these equal to what vuforia recognizes target image position as
+//                double targetY;
+//
+//                double angleToTarget = Math.atan2(targetY/targetX);
 //
 //            }
 
