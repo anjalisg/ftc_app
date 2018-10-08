@@ -48,6 +48,8 @@ public class Auto9837_RedDepot extends LinearOpMode {
     public float robotY = 0;
     public float robotAngle = 0;
 
+    public float robotSpeed; //MEASURE THIS! time to travel certain dist (m), convert to mm/s
+
     @Override
     public void runOpMode() {
 
@@ -77,15 +79,26 @@ public class Auto9837_RedDepot extends LinearOpMode {
 
             telemetry.update();
             idle();
-//
+
 //            RelicRecoveryVuMark vuMark = RelicRecoveryVuMark.from(roverRuckusTemplate);
 //            if ( vuMark != RelicRecoveryVuMark.UNKNOWN) { //if image is known
 //                //define constants:
-//                double targetX;   //set these equal to what vuforia recognizes target image position as
-//                double targetY;
+//                double targetX, targetY;   //set these equal to what vuforia recognizes target image position as
 //
+//                double currX, currY;
 //                double angleToTarget = Math.atan2(targetY/targetX);
 //
+//                double deltaX = targetX - currX, deltaY = targetY - currY;
+//
+//                double timeX = deltaX/robotSpeed;
+//                double timeY = deltaY/robotSpeed;
+//
+//                if(deltaX > 0){
+//                    //turn robot +angleToTarget degrees
+//                }
+//                else{
+//                    //turn robot -angleToTarget degrees
+//                }
 //            }
 
 
