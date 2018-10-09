@@ -10,9 +10,11 @@ import com.qualcomm.robotcore.util.ElapsedTime;
 
 public class Hardware9837_flippyBigHotWheels {
 
-    public DcMotor rightFrontMotor = null;
-    public DcMotor rightBackMotor = null;
-    public DcMotor flipper = null;
+    public DcMotor rightMotor = null;
+    public DcMotor leftMotor = null;
+
+    public DcMotor rightFlipper = null;
+    public DcMotor leftFlipper = null;
 
     HardwareMap hwMap = null;
     private ElapsedTime period  = new ElapsedTime();
@@ -24,15 +26,16 @@ public class Hardware9837_flippyBigHotWheels {
     public void init(HardwareMap hardwareMap){
         //set direction of motors facing opposite directions
 
-        rightFrontMotor.setDirection(DcMotor.Direction.FORWARD);
-        rightBackMotor.setDirection(DcMotor.Direction.FORWARD);
+        rightMotor.setDirection(DcMotor.Direction.FORWARD);
+        leftMotor.setDirection(DcMotor.Direction.FORWARD);
 
         //set pwr to 0
 
-        rightFrontMotor.setPower(0.0);
-        rightBackMotor.setPower(0.0);
+        rightMotor.setPower(0.0);
+        leftMotor.setPower(0.0);
 
-        flipper.setPower(0.0);
+        rightFlipper.setPower(0.0);
+        leftFlipper.setPower(0.0);
     }
 
 }
