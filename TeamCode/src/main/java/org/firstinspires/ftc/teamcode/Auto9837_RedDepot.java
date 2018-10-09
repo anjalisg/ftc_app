@@ -86,7 +86,7 @@ public class Auto9837_RedDepot extends LinearOpMode {
 //                double targetX, targetY;   //set these equal to what vuforia recognizes target image position as
 //
 //                double currX, currY;
-//                double angleToTarget = Math.atan2(targetY/targetX);
+//                double angleToTarget = Math.atan2(targetY/targetX);   //make it update constantly
 //
 //                double deltaX = targetX - currX, deltaY = targetY - currY;
 //
