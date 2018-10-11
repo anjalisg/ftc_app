@@ -10,8 +10,8 @@ import com.qualcomm.robotcore.util.ElapsedTime;
 
 public class Hardware9837_geary {
 
-    public DcMotor rightFrontMotor = null;
-    public DcMotor rightBackMotor = null;
+    public DcMotor rightMotor = null;
+    public DcMotor leftMotor = null;
 
 
     HardwareMap hwMap = null;
@@ -24,13 +24,13 @@ public class Hardware9837_geary {
     public void init(HardwareMap hardwareMap){
         //set direction of motors facing opposite directions
 
-        rightFrontMotor.setDirection(DcMotor.Direction.FORWARD);
-        rightBackMotor.setDirection(DcMotor.Direction.FORWARD);
+        rightMotor.setDirection(DcMotor.Direction.FORWARD);
+        leftMotor.setDirection(DcMotor.Direction.FORWARD);
 
         //set pwr to 0
 
-        rightFrontMotor.setPower(0.0);
-        rightBackMotor.setPower(0.0);
+        rightMotor.setPower(0.0);
+        leftMotor.setPower(0.0);
 
     }
 

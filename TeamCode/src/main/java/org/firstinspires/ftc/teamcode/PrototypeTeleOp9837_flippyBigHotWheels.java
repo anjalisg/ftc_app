@@ -25,12 +25,14 @@ public abstract class PrototypeTeleOp9837_flippyBigHotWheels extends OpMode{
      */
     @Override
     public void loop() {
-        double leftDrive = gamepad1.left_stick_y;
-        double rightDrive = gamepad1.right_stick_y;
+        double leftDrive = gamepad1.left_stick_y;   //when looking from top, left motor = port 3
+        double rightDrive = gamepad1.right_stick_y; //when looking from top, right motor = port 4
 
+        //top flipper (where expansion hub is), port 0
         boolean rightFlipperUp = gamepad1.y;
         boolean rightFlipperDown = gamepad1.a;
 
+        //bottom flipper, port 1
         boolean leftFlipperUp = gamepad1.dpad_up;
         boolean leftFlipperDown = gamepad1.dpad_down;
 

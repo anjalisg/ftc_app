@@ -23,14 +23,10 @@ public abstract class PrototypeTeleOp9837_geary extends OpMode {
         double leftDrive = gamepad1.left_stick_y;
         double rightDrive = gamepad1.right_stick_y;
 
-        geary.rightFrontMotor.setPower(rightDrive);
-        geary.rightBackMotor.setPower(rightDrive);
+        geary.leftMotor.setPower(leftDrive);
+        geary.rightMotor.setPower(rightDrive);
 
     }
-
-    /*
-     * Code to run ONCE after the driver hits STOP
-     */
     @Override
     public void stop(){
     }
