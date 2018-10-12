@@ -10,6 +10,7 @@ import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 @TeleOp(name="TeleOp: Geary", group="Pushbot")
 
 public abstract class PrototypeTeleOp9837_geary extends OpMode {
+    public PrototypeTeleOp9837_geary(){}
     Hardware9837_geary geary = new Hardware9837_geary();
     public void init(){
         geary.init(hardwareMap);

@@ -2,6 +2,7 @@ package org.firstinspires.ftc.teamcode;
 
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
 
+import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.vuforia.HINT;
 import com.vuforia.Vuforia;
@@ -28,6 +29,7 @@ import org.firstinspires.ftc.robotcore.external.navigation.VuforiaTrackables;
 
 
 //@Autonomous(name="Vuforia", group ="Concept")
+@Disabled
 public class Auto9837_RedDepot extends LinearOpMode {
 
     VuforiaLocalizer vuforiaLocalizer;
@@ -37,8 +39,6 @@ public class Auto9837_RedDepot extends LinearOpMode {
     VuforiaTrackableDefaultListener listener;
 
     OpenGLMatrix lastKnownLocation;
-    OpenGLMatrix phoneLocation;
-
     /*License key
     *(register then get license key here https://developer.vuforia.com/targetmanager/licenseManager/licenseListing)
     */
@@ -46,6 +46,8 @@ public class Auto9837_RedDepot extends LinearOpMode {
 
     public float robotX = 0;
     public float robotY = 0;
+
+    OpenGLMatrix phoneLocation;
     public float robotAngle = 0;
 
     public float robotSpeed; //MEASURE THIS! time to travel certain dist (m), convert to mm/s
@@ -116,7 +118,7 @@ public class Auto9837_RedDepot extends LinearOpMode {
         //Extended tracking looks at relative movements from camera frames
         //parameters.useExtendedTracking = false;   //Extended tracking tracks an object when it's not in sight, but it's often inaccurate
 
-        parameters.cameraDirection = VuforiaLocalizer.CameraDirection.BACK;
+        parameters.cameraDirection = VuforiaLocalizer.CameraDirection.FRONT;
 
         //initialize vuforiaLocalizer object using parameters object
         vuforiaLocalizer = ClassFactory.createVuforiaLocalizer(parameters);

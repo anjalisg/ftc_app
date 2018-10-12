@@ -10,7 +10,7 @@ import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
 public abstract class PrototypeTeleOp9837_flippyBigHotWheels extends OpMode{
     Hardware9837_flippyBigHotWheels flippyBigHotWheels = new Hardware9837_flippyBigHotWheels();
-
+    public PrototypeTeleOp9837_flippyBigHotWheels(){}
     public double motorPower_flippers = 0.8;
     public void init (){
         flippyBigHotWheels.init(hardwareMap);
@@ -25,8 +25,8 @@ public abstract class PrototypeTeleOp9837_flippyBigHotWheels extends OpMode{
      */
     @Override
     public void loop() {
-        double leftDrive = gamepad1.left_stick_y;   //when looking from top, left motor = port 3
-        double rightDrive = gamepad1.right_stick_y; //when looking from top, right motor = port 4
+        double leftDrive = gamepad1.left_stick_y;   //when looking from top, left motor = port 2
+        double rightDrive = gamepad1.right_stick_y; //when looking from top, right motor = port 3
 
         //top flipper (where expansion hub is), port 0
         boolean rightFlipperUp = gamepad1.y;
