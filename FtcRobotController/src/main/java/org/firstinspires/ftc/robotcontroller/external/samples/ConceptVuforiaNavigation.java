@@ -82,7 +82,7 @@ import java.util.List;
 
 @com.qualcomm.robotcore.eventloop.opmode.Autonomous(name="Auto_RedDepot_ConceptVuforia", group="Pushbot")
 //@Autonomous(name="Concept: Vuforia Navigation", group ="Concept")
-//@Disabled
+@Disabled
 public class ConceptVuforiaNavigation extends LinearOpMode {
 
     public static final String TAG = "Vuforia Navigation Sample";

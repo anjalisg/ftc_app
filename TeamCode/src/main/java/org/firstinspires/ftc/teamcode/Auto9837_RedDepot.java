@@ -29,7 +29,6 @@ import org.firstinspires.ftc.robotcore.external.navigation.VuforiaTrackables;
 
 
 //@Autonomous(name="Vuforia", group ="Concept")
-@Disabled
 public class Auto9837_RedDepot extends LinearOpMode {
 
     VuforiaLocalizer vuforiaLocalizer;
