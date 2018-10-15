@@ -1,5 +1,6 @@
 package org.firstinspires.ftc.teamcode;
 
+import com.qualcomm.robotcore.hardware.ColorSensor;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.HardwareMap;
 import com.qualcomm.robotcore.util.ElapsedTime;
@@ -12,6 +13,7 @@ public class Hardware9837_geary {
 
     public DcMotor rightMotor = null;
     public DcMotor leftMotor = null;
+    public ColorSensor colorSensor = null;
 
 
     HardwareMap hwMap = null;
@@ -26,6 +28,8 @@ public class Hardware9837_geary {
 
         rightMotor.setDirection(DcMotor.Direction.FORWARD);
         leftMotor.setDirection(DcMotor.Direction.FORWARD);
+
+        colorSensor = hwMap.colorSensor.get("color sensor");
 
         //set pwr to 0
 

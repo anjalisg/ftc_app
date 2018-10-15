@@ -31,6 +31,8 @@ import org.firstinspires.ftc.robotcore.external.navigation.VuforiaTrackables;
 //@Autonomous(name="Vuforia", group ="Concept")
 public class Auto9837_RedDepot extends LinearOpMode {
 
+    Hardware9837_geary geary = new Hardware9837_geary();
+
     VuforiaLocalizer vuforiaLocalizer;
     VuforiaLocalizer.Parameters parameters;
     VuforiaTrackables visionTargets;
@@ -50,6 +52,9 @@ public class Auto9837_RedDepot extends LinearOpMode {
     public float robotAngle = 0;
 
     public float robotSpeed; //MEASURE THIS! time to travel certain dist (m), convert to mm/s
+
+    //color sensor identifying yellow
+    public int redMin = 175, redMax = 225, greenMin = 175, greenMax = 225, blueMin = 25, blueMax = 75;
 
     @Override
     public void runOpMode() {
@@ -96,11 +101,31 @@ public class Auto9837_RedDepot extends LinearOpMode {
 //
 //                if(deltaX > 0){
 //                    //turn robot +angleToTarget degrees
+//                    //move forward for tx seconds (toward left field)
 //                }
 //                else{
 //                    //turn robot -angleToTarget degrees
+//                    //move forward for tx seconds (toward right field)
+//
+//                }
+//                if(deltaY > 0){
+//                    //turn robot -angleToTarget degrees
+//                    //move forward for ty seconds
+//
+//                }
+//                else{
+//                    //turn +90 degrees
+//                    //move forward for ty seconds
+//                }
+//                //turn until robot is parallel to line of minerals
+//                while(     geary.colorSensor.red()  > redMin   && geary.colorSensor.red()<redMax
+//                        && geary.colorSensor.green()> greenMin && geary.colorSensor.green()<greenMax
+//                        && geary.colorSensor.blue() > blueMin  && geary.colorSensor.blue()<blueMax
+//                        ){
+//                    //move straight
 //                }
 //            }
+
 
 
         }
